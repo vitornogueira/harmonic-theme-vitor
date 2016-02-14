@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  {% include "partials/head.html" %}
+<body>
+  {% include "partials/header.html" %}
+  <section id="page" class="content center">
+    <h2 class="content-title">{{ page.metadata.title }}</h2>
+    <article>
+      {{ page.content }}
+    </article>
+    {% include "partials/comments.html" %}
+  </section>
+</body>
+</html>

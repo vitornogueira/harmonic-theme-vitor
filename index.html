@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  {% include "partials/head.html" %}
+<body>
+  {% include "partials/header.html" %}
+  <section id="posts" class="posts center">
+    {% for post in posts %}
+    <article class="post">
+      <time>{{ post.d }}</time>
+      <h2 class="post-title">
+        <a href="/{{ post.link }}">{{ post.title }}</a>
+      </h2>
+      <p class="post-description">{{ post.description }}</p>
+    </article>
+    {% endfor %}
+  </section>
+</body>
+</html>

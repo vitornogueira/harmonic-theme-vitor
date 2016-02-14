@@ -1,0 +1,64 @@
+<head>
+  {% if page.metadata %}
+  <title>{{ page.metadata.title }} | {{ config.title }}</title>
+  {% elif post.metadata %}
+  <title>{{ post.metadata.title }} | {{ config.title }}</title>
+  {% else %}
+  <title>{{ config.title }}</title>
+  {% endif %}
+  <meta charset="utf-8" />
+  <meta name="author" content="{{ config.author }}">
+  {% if page.metadata %}
+  <meta name="description" content="{{ page.metadata.description }}">
+  {% elif post.metadata %}
+  <meta name="description" content="{{ post.metadata.description }}">
+  {% else %}
+  <meta name="description" content="{{ config.description }}">
+  {% endif %}
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#3388dd">
+  {% if page.metadata %}
+  <link rel="canonical" href="{{ config.domain }}/{{ page.metadata.link }}">
+  {% elif post.metadata %}
+  <link rel="canonical" href="{{ config.domain }}/{{ post.metadata.link }}">
+  {% else %}
+  <link rel="canonical" href="{{ config.domain }}">
+  {% endif %}
+  {% if page.metadata %}
+  <meta property="og:url" content="{{ config.domain }}/{{ page.metadata.link }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ page.metadata.title }} | {{ config.title }}" />
+  <meta property="og:description" content="{{ page.metadata.description }}" />
+  {% elif post.metadata %}
+  <meta property="og:url" content="{{ config.domain }}/{{ post.metadata.link }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{ post.metadata.title }} | {{ config.title }}" />
+  <meta property="og:description" content="{{ post.metadata.description }}" />
+  {% else %}
+  <meta property="og:url" content="{{ config.domain }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ config.title }}" />
+  <meta property="og:description" content="{{ config.description }}" />
+  {% endif %}
+  <meta property="og:site_name" content="{{ config.name }}" />
+  <meta property="og:image" content="{{ config.domain }}/assets/img/share.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@vitornogueira">
+  <meta name="twitter:creator" content="@vitornogueira">
+  {% if page.metadata %}
+  <meta name="twitter:title" content="{{ page.metadata.title }} | {{ config.title }}">
+  <meta name="twitter:description" content="{{ page.metadata.description }}">
+  {% elif post.metadata %}
+  <meta name="twitter:title" content="{{ post.metadata.title }} | {{ config.title }}">
+  <meta name="twitter:description" content="{{ post.metadata.description }}">
+  {% else %}
+  <meta name="twitter:title" content="{{ config.title }}">
+  <meta name="twitter:description" content="{{ config.description }}">
+  {% endif %}
+  <meta name="twitter:image" content="{{ config.domain }}/assets/img/share.jpg">
+
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
