@@ -1,0 +1,7 @@
+<nav class="navigation">
+  <a href="/" class="navigation-item">Home</a>
+  {% for page in config.pages %}
+  <a href="{{ page.link }}" class="navigation-item">{{ page.title | capitalize }}</a>
+  {% endfor %}
+  <a href="https://github.com/vitornogueira" target="_blank" class="navigation-item">Github</a>
+</nav>
