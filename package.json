@@ -1,6 +1,6 @@
 {
   "name": "harmonic-theme-vitor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vitor Nogueira Blog Theme",
   "main": "index.js",
   "scripts": {
@@ -10,13 +10,11 @@
     "harmonic",
     "harmonictheme"
   ],
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/vitornogueira/harmonic-theme-vitor.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vitornogueira/harmonic-theme-vitor.git"
   },
   "author": "Vitor Nogueira <vnweb.contato@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "normalize-styl": "3.0.3"
-  }
+  "dependencies": {}
 }
